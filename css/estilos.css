@@ -1,0 +1,26 @@
+header {
+	background: #407acb; /*Color Omar: #834d35.. Color Majin Boo: #f0ddcf*/
+	color:#fff;
+}
+
+aside {
+	background: #f0ddcf;
+}
+
+.main {
+	background: #f2f2f2;
+}
+
+.dinero_actual {
+	background: #fff;
+	color: #000;
+}
+
+.dinero_abonado {
+	background: #fff;
+}
+
+footer {
+	background: #453648;
+	color: #fff;
+}
