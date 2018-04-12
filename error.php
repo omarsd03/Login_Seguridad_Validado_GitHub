@@ -17,9 +17,9 @@
 		</div>
 	</header>
 
-	<h1>Lo sentimos, tu cuenta ha sido bloqueada por exceso de intentos</h1>
+	<h1><span class="bienvenido"><i class="icon icon-lock"></i></span> Lo sentimos, tu cuenta ha sido bloqueada por exceso de intentos</h1>
 	<br>
-	<h2>Espere un momento, será redireccionado...</h2>
+	<h2><span class="bienvenido"><i class="icon icon-sad2"></i></span> Espere un momento, será redireccionado...</h2>
 	<?php 
 
 		ob_start();

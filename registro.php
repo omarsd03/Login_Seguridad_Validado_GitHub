@@ -29,20 +29,15 @@
 				$errores .= '<li> El nombre de usuario ya existe </li>';
 			}
 
-			$password = hash('sha512', $password);
-			$password2 = hash('sha512', $password2);
-
 			if ($password != $password2) {
-				$errores .= '<li> Las contraseñas no son iguales </li>';
+				$errores .= '<li> Las contraseñas no coinciden </li>';
 			}
 		}
 
 		if ($errores == '') {
 			$statement = $conexion->prepare('INSERT INTO usuarios (id, usuario, pass, intentos) VALUES (null, :usuario, :pass, :intentos)');
 			$statement->execute(array(':usuario' => $usuario, ':pass' => $password, ':intentos' => $intentos));
-			//echo "Datos Guardados";
-
-			header('Location: login.php');
+			echo "<script>alert('Usuario Registrado');window.location.href='login.php';</script>";
 		}
 	}
 

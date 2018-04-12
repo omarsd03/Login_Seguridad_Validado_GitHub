@@ -7,16 +7,13 @@
 	if (!isset($_SESSION['intentos'])) 
 		$_SESSION['intentos'] = 0;
 	elseif ($_SESSION['intentos'] >= 3) {
-		//echo "Bloqueado";
 	}
 
 	$errores = '';
-	//$contador = 0;
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$usuario = filter_var(strtolower($_POST['usuario']),FILTER_SANITIZE_STRING);
 		$password = $_POST['password'];
-		$password = hash('sha512', $password);
 
 		try {
 			$conexion = new PDO('mysql:host=localhost;dbname=loginseguridad','root','omar');
@@ -49,11 +46,12 @@
 			$errores .= '<li> Datos Incorrectos o el usuario no existe. Intente Nuevamente </li>';
 		}
 
-		if ($resul != false && $_SESSION['intentos'] >= 3) {
-			//header("Location: error.php");
-			//header("Status: 301 Moved Permanently");
-			//header("Location: login.php");
+		if ($resul != false && $_SESSION['intentos'] > 2) {
 			header("Location: error.php");
+		}
+
+		if ($resul != false) {
+			echo"<script>alert('Este usuario esta bloqueado')</script>";
 		}
 	}
 

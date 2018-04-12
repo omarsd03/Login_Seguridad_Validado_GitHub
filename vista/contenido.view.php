@@ -20,20 +20,22 @@
 	
 	<?php include 'extras/header.php'; ?>
 
+	<h3><span class="bienvenido"><i class="icon icon-user-check"></i></span> Bienvenid@ <?php echo $_SESSION['usuario']; ?> </h3>
+
 	<div>
 		<a href="cerrar.php" class="btn btn-warning"><span class="cerrar_sesion"><i class="icon icon-switch"></i></span> Cerrar Sesion</a>
 	</div>
 
 	<div class="container-fluid">
 		<section class="main row">
-			<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+			<aside class="col-sm-4 col-md-3 col-lg-3">
 				<h3>Aside</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo odio repellendus dignissimos veniam recusandae magnam, dolor omnis eveniet laboriosam quas culpa voluptate, at, officia in natus assumenda beatae illo. A!
 				</p>
 			</aside>
 
-			<article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+			<article class="col-sm-8 col-md-9 col-lg-9">
 				<h3>Novedades e Informes</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro voluptatibus omnis nulla quis mollitia dicta quasi, voluptatum totam labore doloremque ea fugit consectetur itaque ab et, odio est iusto recusandae.

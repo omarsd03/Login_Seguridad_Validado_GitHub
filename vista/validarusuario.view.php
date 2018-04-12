@@ -18,11 +18,13 @@
 	</header>
 
 	<div class="container" align="center">
-		<h1 class="titulo">Iniciar Sesion</h1>
+		<h1 class="titulo">Recuperar Contraseña</h1>
+		<p>Por favor, ingresa nuevamente tu nombre de usuario</p>
 		<hr class="border">
 
-		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="form" method="POST" name="login" onsubmit="return validarLogin()">
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="form" method="POST" name="validarusuario" onsubmit="return validarUsuario()">
 
+			<br>
 			<div class="input-group col-sm-4">
 			    <span class="input-group-addon">
 			        <i class="icon icon-user"></i>
@@ -32,15 +34,7 @@
 			<br>
 
 			<div class="input-group col-sm-4">
-			    <span class="input-group-addon">
-			        <i class="icon icon-key2"></i>
-			    </span>
-			    <input type="password" id="password" class="form-control input-lg" name="password" placeholder="Contraseña" />
-			</div>
-			<br>
-
-			<div class="input-group col-sm-4">
-				<button class="btn btn-primary submit col-sm-12" type="submit"><span class="cerrar_sesion"><i class="icon icon-users"></i></span> Iniciar Sesion</button>
+				<button class="btn btn-primary submit col-sm-12" type="submit"><span class="cerrar_sesion"><i class="icon icon-user-minus"></i></span> Recuperar Contraseña</button>
 			</div>
 			<br>
 
@@ -55,14 +49,13 @@
 		</form>
 
 		<p>
-			¿Aun no tienes cuenta?
-			<a href="registro.php">Registrate</a>
+			¿Ya tienes cuenta?
+			<a href="login.php">Iniciar Sesion</a>
 		</p>
 		<p>
-			<a href="validarusuario.php">¿Olvidaste tu contraseña?</a>
-		</p>
 	</div>
 
-	<script src="js/login.js"></script>
+	<script src="js/validarusuario.js"></script>
+
 </body>
 </html>

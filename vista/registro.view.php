@@ -13,7 +13,7 @@
 
 	<header>
 		<div class="container" align="center">
-			<img class="img-responsive" src="img/logo.png" alt="ASFI" width="180" height="150" align="center";>
+			<img class="img-responsive" src="img/logo.png" alt="ASFI" width="180" height="150" align="center">
 		</div>
 	</header>
 
@@ -21,13 +21,13 @@
 		<h1 class="titulo">Registrate</h1>
 		<hr class="border">
 
-		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="form" method="POST" name="login">
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="form" method="POST" name="login" onsubmit="return validarRegistro()">
 
 			<div class="input-group col-sm-4">
 			    <span class="input-group-addon">
 			        <i class="icon icon-user"></i>
 			    </span>
-			    <input type="text" class="form-control input-lg" name="usuario" placeholder="Usuario" />
+			    <input type="text" id="usuario" class="form-control input-lg" name="usuario" placeholder="Usuario" />
 			</div>
 			<br>
 
@@ -35,7 +35,7 @@
 			    <span class="input-group-addon">
 			        <i class="icon icon-lock"></i>
 			    </span>
-			    <input type="password" class="form-control input-lg" name="password" placeholder="Contraseña" />
+			    <input type="password" id="password" class="form-control input-lg" name="password" placeholder="Contraseña" />
 			</div>
 			<br>
 
@@ -43,10 +43,13 @@
 			    <span class="input-group-addon">
 			        <i class="icon icon-lock"></i>
 			    </span>
-			    <input type="password" class="form-control input-lg" name="password2" placeholder="Repetir Contraseña" />
-			    <span class="input-group-addon">
-			    	<i class="btn icon-arrow-right" onclick="login.submit()"></i>
-			    </span>
+			    <input type="password" id="password2" class="form-control input-lg" name="password2" placeholder="Repetir Contraseña" />
+			    
+			</div>
+			<br>
+
+			<div class="input-group col-sm-4">
+				<button class="btn btn-primary submit col-sm-12" type="submit"><span class="registrar"><i class="icon icon-user-plus"></i></span> Registrar</button>
 			</div>
 			<br>
 
@@ -64,5 +67,7 @@
 			<a href="login.php">Iniciar Sesion</a>
 		</p>
 	</div>
+
+	<script src="js/registro.js"></script>
 </body>
 </html>
