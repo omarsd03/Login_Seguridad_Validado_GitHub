@@ -37,7 +37,7 @@
 		if ($errores == '') {
 			$statement = $conexion->prepare('INSERT INTO usuarios (id, usuario, pass, intentos) VALUES (null, :usuario, :pass, :intentos)');
 			$statement->execute(array(':usuario' => $usuario, ':pass' => $password, ':intentos' => $intentos));
-			echo "<script>alert('Usuario Registrado');window.location.href='login.php';</script>";
+			echo "<script>alert('Usuario registrado correctamente');window.location.href='login.php';</script>";
 		}
 	}
 

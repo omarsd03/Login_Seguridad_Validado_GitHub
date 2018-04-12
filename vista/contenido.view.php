@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ADFIE</title>
+	<title>Bienvenido</title>
 
 	<link href='img/logo.png' rel='shortcut icon' type='image/png'>
 
