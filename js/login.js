@@ -43,12 +43,6 @@ function validarLogin() {
 		document.login.password.focus();
 		return false;
 	}
-
-	//Validacion placeholder password2
-	if (document.login.password2.value.length == 0) {
-		alert("Tiene que reescribir su contraseña");
-		document.login.password2.focus();
-		return false;
-	}
+	
 	return true;
 }
